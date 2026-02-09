@@ -181,7 +181,7 @@ const Signup = () => {
       <div className="auth-container">
         <div className="auth-header">
           <h1>Create Account</h1>
-          <p>Join PowerFuel and start your fitness journey</p>
+          <p>Join HY Nutrition and start your fitness journey</p>
         </div>
 
         {error && <div className="error-message">{error}</div>}

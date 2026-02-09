@@ -475,7 +475,7 @@ const Checkout = () => {
                 <FaLock />
                 {isProcessing
                   ? "Processing..."
-                  : `Pay $${finalTotal.toFixed(2)}`}
+                  : `Pay ₹${finalTotal.toFixed(2)}`}
               </button>
             </form>
           </main>
@@ -493,7 +493,7 @@ const Checkout = () => {
                       <span className="item-quantity">x{item.quantity}</span>
                     </div>
                     <span className="item-price">
-                      ${(item.price * item.quantity).toFixed(2)}
+                      ₹{(item.price * item.quantity).toFixed(2)}
                     </span>
                   </div>
                 ))}
@@ -502,17 +502,17 @@ const Checkout = () => {
               <div className="order-totals">
                 <div className="total-row">
                   <span>Subtotal</span>
-                  <span>${total.toFixed(2)}</span>
+                  <span>₹{total.toFixed(2)}</span>
                 </div>
                 <div className="total-row">
                   <span>Shipping</span>
                   <span>
-                    {shippingCost === 0 ? "Free" : `$${shippingCost}`}
+                    {shippingCost === 0 ? "Free" : `₹${shippingCost}`}
                   </span>
                 </div>
                 <div className="total-row final">
                   <span>Total</span>
-                  <span>${finalTotal.toFixed(2)}</span>
+                  <span>₹{finalTotal.toFixed(2)}</span>
                 </div>
               </div>
 

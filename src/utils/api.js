@@ -1,8 +1,14 @@
 import axios from "axios";
 
+// Normalize base URL so env can be either "http://localhost:5000" OR "http://localhost:5000/api"
+const rawBaseUrl = process.env.REACT_APP_API_URL || "http://localhost:5000";
+const normalizedBaseUrl = rawBaseUrl.endsWith("/api")
+  ? rawBaseUrl
+  : `${rawBaseUrl.replace(/\/$/, "")}/api`;
+
 // Create axios instance with base configuration
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || "http://localhost:5000/api",
+  baseURL: normalizedBaseUrl,
   timeout: 10000,
   headers: {
     "Content-Type": "application/json",
@@ -69,7 +75,7 @@ export const bannerAPI = {
   // Public endpoint that doesn't require authentication
   getPublic: () => {
     const publicApi = axios.create({
-      baseURL: process.env.REACT_APP_API_URL || "http://localhost:5000/api",
+      baseURL: normalizedBaseUrl,
       timeout: 10000,
       headers: {
         "Content-Type": "application/json",
@@ -87,6 +93,11 @@ export const legalPageAPI = {
   delete: (pageType) => api.delete(`/legal-pages/${pageType}`),
   toggleStatus: (pageType) => api.patch(`/legal-pages/${pageType}/toggle`),
   getPublic: (pageType) => api.get(`/legal-pages/public/${pageType}`),
+};
+
+export const settingsAPI = {
+  // Public storefront endpoint (no auth)
+  getPublic: () => api.get("/settings/public"),
 };
 
 export const orderAPI = {

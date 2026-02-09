@@ -29,7 +29,7 @@ const CookiePolicy = () => {
 
           <section className="legal-section">
             <h2>2. How We Use Cookies</h2>
-            <p>PowerFuel uses cookies for several purposes:</p>
+            <p>HY Nutrition uses cookies for several purposes:</p>
             <ul>
               <li>
                 <strong>Essential Cookies:</strong> Required for basic website
@@ -409,7 +409,7 @@ const CookiePolicy = () => {
             </p>
             <div className="contact-info">
               <p>
-                <strong>Email:</strong> privacy@powerfuel.com
+                <strong>Email:</strong> privacy@HY Nutrition.com
               </p>
               <p>
                 <strong>Phone:</strong> +1 (555) 123-4567

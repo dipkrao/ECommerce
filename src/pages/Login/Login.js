@@ -91,7 +91,7 @@ const Login = () => {
       <div className="auth-container">
         <div className="auth-header">
           <h1>Welcome Back</h1>
-          <p>Sign in to your PowerFuel account</p>
+          <p>Sign in to your HY Nutrition account</p>
         </div>
 
         {error && <div className="error-message">{error}</div>}

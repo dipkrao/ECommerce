@@ -331,7 +331,7 @@ const Profile = () => {
                           >
                             {order.status}
                           </span>
-                          <span className="order-total">${order.total}</span>
+                          <span className="order-total">₹{order.total}</span>
                         </div>
                       </div>
 
@@ -342,7 +342,7 @@ const Profile = () => {
                             <span className="item-quantity">
                               x{item.quantity}
                             </span>
-                            <span className="item-price">${item.price}</span>
+                            <span className="item-price">₹{item.price}</span>
                           </div>
                         ))}
                       </div>
@@ -375,7 +375,7 @@ const Profile = () => {
                       </div>
                       <div className="item-info">
                         <h3 className="item-name">{item.name}</h3>
-                        <span className="item-price">${item.price}</span>
+                        <span className="item-price">₹{item.price}</span>
                       </div>
                       <div className="item-actions">
                         <button className="btn btn-primary">Add to Cart</button>

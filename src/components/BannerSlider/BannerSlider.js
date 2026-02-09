@@ -12,9 +12,9 @@ const BannerSlider = () => {
   const [banners, setBanners] = useState([
     {
       id: 1,
-      title: "Welcome to PowerFuel",
+      title: "Welcome to HY Nutrition",
       description: "Premium supplements for your fitness journey",
-      image: "https://via.placeholder.com/1200x400?text=PowerFuel+Supplements",
+      image: "https://via.placeholder.com/1200x400?text=HY Nutrition+Supplements",
       buttonText: "Shop Now",
       link: "/products",
     },
@@ -153,7 +153,7 @@ const BannerSlider = () => {
             onError={(e) => {
               console.error("Image failed to load:", currentBanner.image);
               e.target.src =
-                "https://via.placeholder.com/1200x400?text=PowerFuel+Supplements";
+                "https://via.placeholder.com/1200x400?text=HY Nutrition+Supplements";
             }}
           />
         </div>
@@ -161,15 +161,7 @@ const BannerSlider = () => {
           <div className="banner-text">
             <h1 className="banner-title">{currentBanner.title}</h1>
             <p className="banner-description">{currentBanner.description}</p>
-            {currentBanner.buttonText && (
-              <Link
-                to={currentBanner.link || "/products"}
-                className="btn btn-primary banner-btn"
-              >
-                {currentBanner.buttonText}
-                <FaArrow />
-              </Link>
-            )}
+            {/* Button removed as per design */}
           </div>
         </div>
 

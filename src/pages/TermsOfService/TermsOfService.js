@@ -15,7 +15,7 @@ const TermsOfService = () => {
           <section className="legal-section">
             <h2>1. Acceptance of Terms</h2>
             <p>
-              By accessing and using PowerFuel's website, mobile application,
+              By accessing and using HY Nutrition's website, mobile application,
               and services, you accept and agree to be bound by the terms and
               provision of this agreement. If you do not agree to abide by the
               above, please do not use this service.
@@ -30,7 +30,7 @@ const TermsOfService = () => {
           <section className="legal-section">
             <h2>2. Description of Service</h2>
             <p>
-              PowerFuel provides an online platform for purchasing fitness supplements, health products, and related merchandise. Our services include:
+              HY Nutrition provides an online platform for purchasing fitness supplements, health products, and related merchandise. Our services include:
             </p>
             <ul>
               <li>Online product browsing and purchasing</li>
@@ -123,9 +123,9 @@ const TermsOfService = () => {
               <ul>
                 <li><strong>Base Prices:</strong> Listed in USD (US Dollars)</li>
                 <li><strong>Taxes:</strong> Sales tax applied based on shipping address</li>
-                <li><strong>Shipping:</strong> $5.99 standard, $12.99 express, FREE over $50</li>
-                <li><strong>Handling:</strong> $2.99 processing fee per order</li>
-                <li><strong>Discounts:</strong> 10% off first order, 15% off orders over $100</li>
+                <li><strong>Shipping:</strong> ₹5.99 standard, ₹12.99 express, FREE over ₹50</li>
+                <li><strong>Handling:</strong> ₹2.99 processing fee per order</li>
+                <li><strong>Discounts:</strong> 10% off first order, 15% off orders over ₹100</li>
               </ul>
             </div>
 
@@ -177,7 +177,7 @@ const TermsOfService = () => {
                 <li><strong>Debit Cards:</strong> All major debit card networks</li>
                 <li><strong>Digital Wallets:</strong> PayPal, Apple Pay, Google Pay, Samsung Pay</li>
                 <li><strong>Buy Now, Pay Later:</strong> Klarna, Afterpay, Affirm</li>
-                <li><strong>Gift Cards:</strong> PowerFuel gift cards and e-gift cards</li>
+                <li><strong>Gift Cards:</strong> HY Nutrition gift cards and e-gift cards</li>
               </ul>
             </div>
 
@@ -202,11 +202,11 @@ const TermsOfService = () => {
             <div className="example-box">
               <h4>Shipping Options & Costs:</h4>
               <ul>
-                <li><strong>Standard Shipping:</strong> $5.99 - 5-7 business days</li>
-                <li><strong>Express Shipping:</strong> $12.99 - 2-3 business days</li>
-                <li><strong>Overnight Shipping:</strong> $24.99 - Next business day</li>
-                <li><strong>Free Shipping:</strong> Orders over $50 (standard shipping)</li>
-                <li><strong>International:</strong> $19.99 - 7-14 business days</li>
+                <li><strong>Standard Shipping:</strong> ₹5.99 - 5-7 business days</li>
+                <li><strong>Express Shipping:</strong> ₹12.99 - 2-3 business days</li>
+                <li><strong>Overnight Shipping:</strong> ₹24.99 - Next business day</li>
+                <li><strong>Free Shipping:</strong> Orders over ₹50 (standard shipping)</li>
+                <li><strong>International:</strong> ₹19.99 - 7-14 business days</li>
               </ul>
             </div>
 
@@ -225,10 +225,10 @@ const TermsOfService = () => {
             <div className="example-box">
               <h4>International Shipping Details:</h4>
               <ul>
-                <li><strong>Canada:</strong> $14.99 - 5-7 business days</li>
-                <li><strong>Mexico:</strong> $19.99 - 7-10 business days</li>
-                <li><strong>UK:</strong> $24.99 - 7-12 business days</li>
-                <li><strong>Australia:</strong> $29.99 - 10-15 business days</li>
+                <li><strong>Canada:</strong> ₹14.99 - 5-7 business days</li>
+                <li><strong>Mexico:</strong> ₹19.99 - 7-10 business days</li>
+                <li><strong>UK:</strong> ₹24.99 - 7-12 business days</li>
+                <li><strong>Australia:</strong> ₹29.99 - 10-15 business days</li>
                 <li><strong>Restrictions:</strong> Some products may not be available internationally</li>
               </ul>
             </div>
@@ -303,7 +303,7 @@ const TermsOfService = () => {
             <h2>9. Intellectual Property</h2>
             <p>
               The content on our website, including text, graphics, logos,
-              images, and software, is the property of PowerFuel or its content
+              images, and software, is the property of HY Nutrition or its content
               suppliers and is protected by copyright and other intellectual
               property laws.
             </p>
@@ -316,7 +316,7 @@ const TermsOfService = () => {
           <section className="legal-section">
             <h2>10. Limitation of Liability</h2>
             <p>
-              To the maximum extent permitted by law, PowerFuel shall not be
+              To the maximum extent permitted by law, HY Nutrition shall not be
               liable for any indirect, incidental, special, consequential, or
               punitive damages, including but not limited to loss of profits,
               data, or use.
@@ -331,7 +331,7 @@ const TermsOfService = () => {
           <section className="legal-section">
             <h2>11. Indemnification</h2>
             <p>
-              You agree to indemnify and hold harmless PowerFuel, its officers,
+              You agree to indemnify and hold harmless HY Nutrition, its officers,
               directors, employees, and agents from any claims, damages, or
               expenses arising from your use of our service or violation of
               these terms.
@@ -364,7 +364,7 @@ const TermsOfService = () => {
             </p>
             <div className="contact-info">
               <p>
-                <strong>Email:</strong> legal@powerfuel.com
+                <strong>Email:</strong> legal@HY Nutrition.com
               </p>
               <p>
                 <strong>Phone:</strong> +1 (555) 123-4567

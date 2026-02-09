@@ -75,7 +75,7 @@ const Home = () => {
                 <FaTruck />
               </div>
               <h3>Free Shipping</h3>
-              <p>Free shipping on orders over $50</p>
+              <p>Free shipping on orders over ₹50</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">
@@ -152,7 +152,7 @@ const Home = () => {
                       ({product.totalReviews || 0})
                     </span>
                   </div>
-                  <p className="product-price">${product.price}</p>
+                  <p className="product-price">₹{product.price}</p>
                   <Link
                     to={`/products/${product._id}`}
                     className="view-details"
@@ -208,7 +208,7 @@ const Home = () => {
           <div className="cta-content">
             <h2>Ready to Transform Your Performance?</h2>
             <p>
-              Join thousands of athletes who trust PowerFuel for their
+              Join thousands of athletes who trust HY Nutrition for their
               supplement needs
             </p>
             <div className="cta-buttons">
@@ -235,7 +235,7 @@ const Home = () => {
             <div className="testimonial-card">
               <div className="testimonial-content">
                 <p>
-                  "PowerFuel's whey protein has been a game-changer for my
+                  "HY Nutrition's whey protein has been a game-changer for my
                   muscle recovery. I've seen incredible gains in just 3 months!"
                 </p>
                 <div className="testimonial-author">
@@ -262,7 +262,7 @@ const Home = () => {
               <div className="testimonial-content">
                 <p>
                   "Quality supplements that actually work. I've tried many
-                  brands, but PowerFuel delivers consistent results."
+                  brands, but HY Nutrition delivers consistent results."
                 </p>
                 <div className="testimonial-author">
                   <strong>David Chen</strong>

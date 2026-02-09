@@ -92,7 +92,7 @@ const ReduxExample = () => {
         <h3 className="text-lg font-semibold mb-2">Cart State</h3>
         <div className="space-y-2">
           <p>Items Count: {itemCount}</p>
-          <p>Total: ${total}</p>
+          <p>Total: ₹{total}</p>
           <p>Items: {items.length > 0 ? JSON.stringify(items.slice(0, 2), null, 2) : 'None'}</p>
         </div>
         

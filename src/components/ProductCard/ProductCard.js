@@ -129,9 +129,9 @@ const ProductCard = ({ product, onAddToCart }) => {
 
           <div className="product-footer">
             <div className="product-price">
-              <span className="current-price">${product.price}</span>
+              <span className="current-price">₹{product.price}</span>
               {product.originalPrice && (
-                <span className="original-price">${product.originalPrice}</span>
+                <span className="original-price">₹{product.originalPrice}</span>
               )}
             </div>
 
@@ -201,9 +201,9 @@ const ProductCard = ({ product, onAddToCart }) => {
                 </div>
                 
                 <div className="quick-view-price">
-                  <span className="current-price">${product.price}</span>
+                  <span className="current-price">₹{product.price}</span>
                   {product.originalPrice && (
-                    <span className="original-price">${product.originalPrice}</span>
+                    <span className="original-price">₹{product.originalPrice}</span>
                   )}
                 </div>
                 

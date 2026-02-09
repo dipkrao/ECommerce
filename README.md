@@ -1,4 +1,4 @@
-# PowerFuel Supplements - Ecommerce Website
+# HY Nutrition Supplements - Ecommerce Website
 
 A modern, responsive React.js ecommerce website for premium supplement products targeting gym enthusiasts, athletes, and sports people.
 
@@ -322,10 +322,10 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 📞 Support
 
 For support and questions:
-- **Email**: support@powerfuel.com
+- **Email**: support@HY Nutrition.com
 - **Documentation**: Check the code comments
 - **Issues**: Report bugs via GitHub issues
 
 ---
 
-**PowerFuel Supplements** - Fuel Your Performance! 💪
+**HY Nutrition Supplements** - Fuel Your Performance! 💪

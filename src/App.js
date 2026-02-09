@@ -9,6 +9,7 @@ import { Provider } from "react-redux";
 import { store } from "./store";
 import { useAppSelector, useAppDispatch } from "./store/hooks";
 import { getProfile } from "./store/slices/authSlice";
+import { fetchPublicSettings } from "./store/slices/settingsSlice";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
@@ -77,6 +78,34 @@ function AppContent() {
         localStorage.removeItem("user");
       });
     }
+  }, [dispatch]);
+
+  useEffect(() => {
+    // Public store settings (name/address/etc.) used across the site
+    dispatch(fetchPublicSettings());
+  }, [dispatch]);
+
+  useEffect(() => {
+    // Keep settings fresh (useful when admin updates store details while site is open)
+    const refresh = () => dispatch(fetchPublicSettings());
+
+    const onFocus = () => refresh();
+    const onVisibility = () => {
+      if (!document.hidden) refresh();
+    };
+
+    window.addEventListener("focus", onFocus);
+    document.addEventListener("visibilitychange", onVisibility);
+
+    const interval = setInterval(() => {
+      if (!document.hidden) refresh();
+    }, 30000); // every 30s while visible
+
+    return () => {
+      window.removeEventListener("focus", onFocus);
+      document.removeEventListener("visibilitychange", onVisibility);
+      clearInterval(interval);
+    };
   }, [dispatch]);
 
   return (

@@ -130,9 +130,9 @@ const Cart = () => {
                   </div>
 
                   <div className="item-price">
-                    <span className="price">${item.price}</span>
+                    <span className="price">₹{item.price}</span>
                     <span className="subtotal">
-                      ${(item.price * item.quantity).toFixed(2)}
+                      ₹{(item.price * item.quantity).toFixed(2)}
                     </span>
                   </div>
 
@@ -165,23 +165,23 @@ const Cart = () => {
 
               <div className="summary-row">
                 <span>Subtotal ({itemCount} items)</span>
-                <span>${total.toFixed(2)}</span>
+                <span>₹{total.toFixed(2)}</span>
               </div>
 
               <div className="summary-row">
                 <span>Shipping</span>
-                <span>{total >= 50 ? "Free" : "$5.99"}</span>
+                <span>{total >= 50 ? "Free" : "₹5.99"}</span>
               </div>
 
               {total < 50 && (
                 <div className="free-shipping-notice">
-                  <p>Add ${(50 - total).toFixed(2)} more for free shipping!</p>
+                  <p>Add ₹{(50 - total).toFixed(2)} more for free shipping!</p>
                 </div>
               )}
 
               <div className="summary-row total">
                 <span>Total</span>
-                <span>${(total + (total >= 50 ? 0 : 5.99)).toFixed(2)}</span>
+                <span>₹{(total + (total >= 50 ? 0 : 5.99)).toFixed(2)}</span>
               </div>
 
               <div className="summary-actions">
@@ -211,7 +211,7 @@ const Cart = () => {
 
               <div className="security-notice">
                 <p>🔒 Secure checkout with SSL encryption</p>
-                <p>🚚 Free shipping on orders over $50</p>
+                <p>🚚 Free shipping on orders over ₹50</p>
                 <p>↩️ 30-day return policy</p>
               </div>
             </div>

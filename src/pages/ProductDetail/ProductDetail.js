@@ -125,9 +125,9 @@ const ProductDetail = () => {
             </div>
 
             <div className="product-price">
-              <span className="current-price">${product.price}</span>
+              <span className="current-price">₹{product.price}</span>
               {product.originalPrice && (
-                <span className="original-price">${product.originalPrice}</span>
+                <span className="original-price">₹{product.originalPrice}</span>
               )}
             </div>
 
@@ -217,7 +217,7 @@ const ProductDetail = () => {
                 <FaTruck className="benefit-icon" />
                 <div className="benefit-text">
                   <strong>Free Shipping</strong>
-                  <span>On orders over $50</span>
+                  <span>On orders over ₹50</span>
                 </div>
               </div>
               
@@ -329,9 +329,9 @@ const ProductDetail = () => {
                 <div className="shipping-info">
                   <h4>Shipping Options</h4>
                   <ul>
-                    <li><strong>Free Shipping:</strong> On orders over $50 (3-5 business days)</li>
-                    <li><strong>Standard Shipping:</strong> $5.99 (5-7 business days)</li>
-                    <li><strong>Express Shipping:</strong> $12.99 (2-3 business days)</li>
+                    <li><strong>Free Shipping:</strong> On orders over ₹50 (3-5 business days)</li>
+                    <li><strong>Standard Shipping:</strong> ₹5.99 (5-7 business days)</li>
+                    <li><strong>Express Shipping:</strong> ₹12.99 (2-3 business days)</li>
                   </ul>
                   
                   <h4>Return Policy</h4>

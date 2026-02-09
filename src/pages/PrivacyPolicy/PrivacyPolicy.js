@@ -15,14 +15,14 @@ const PrivacyPolicy = () => {
           <section className="legal-section">
             <h2>1. Introduction</h2>
             <p>
-              PowerFuel ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our mobile application, or make purchases from us.
+              HY Nutrition ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our mobile application, or make purchases from us.
             </p>
             <p>
               By using our services, you agree to the collection and use of information in accordance with this policy.
             </p>
             <div className="info-box">
               <p><strong>Company Details:</strong></p>
-              <p>PowerFuel Inc.</p>
+              <p>HY Nutrition Inc.</p>
               <p>Business Registration: NY-123456789</p>
               <p>Tax ID: 12-3456789</p>
               <p>Founded: 2020</p>
@@ -91,7 +91,7 @@ const PrivacyPolicy = () => {
             <div className="example-box">
               <h4>Specific Use Cases:</h4>
               <ul>
-                <li><strong>Order Processing:</strong> When you order "Whey Protein 2lb" for $49.99</li>
+                <li><strong>Order Processing:</strong> When you order "Whey Protein 2lb" for ₹49.99</li>
                 <li><strong>Shipping Updates:</strong> "Your order #ORD-2024-001 has been shipped via FedEx"</li>
                 <li><strong>Personalization:</strong> "Based on your purchase of pre-workout, you might like..."</li>
                 <li><strong>Customer Support:</strong> "Hello John, regarding your inquiry about shipping..."</li>
@@ -161,7 +161,7 @@ const PrivacyPolicy = () => {
             <div className="example-box">
               <h4>How to Exercise Your Rights:</h4>
               <ul>
-                <li><strong>Access Request:</strong> Email privacy@powerfuel.com with subject "Data Access Request"</li>
+                <li><strong>Access Request:</strong> Email privacy@HY Nutrition.com with subject "Data Access Request"</li>
                 <li><strong>Correction:</strong> Update your profile in your account settings</li>
                 <li><strong>Deletion:</strong> Submit deletion request through customer support</li>
                 <li><strong>Marketing Opt-out:</strong> Click "Unsubscribe" in any marketing email</li>
@@ -219,7 +219,7 @@ const PrivacyPolicy = () => {
                 <li><strong>Registration:</strong> Users must be 18+ to create accounts</li>
                 <li><strong>Purchases:</strong> Credit card verification for age confirmation</li>
                 <li><strong>Content:</strong> Age-appropriate content filtering</li>
-                <li><strong>Reporting:</strong> Report underage users to privacy@powerfuel.com</li>
+                <li><strong>Reporting:</strong> Report underage users to privacy@HY Nutrition.com</li>
               </ul>
             </div>
           </section>
@@ -258,7 +258,7 @@ const PrivacyPolicy = () => {
             <h2>12. Contact Us</h2>
             <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
             <div className="contact-info">
-              <p><strong>Email:</strong> privacy@powerfuel.com</p>
+              <p><strong>Email:</strong> privacy@HY Nutrition.com</p>
               <p><strong>Phone:</strong> +1 (555) 123-4567</p>
               <p><strong>Address:</strong> 123 Ecommerce Street, Business District, NY 10001</p>
               <p><strong>Data Protection Officer:</strong> Sarah Johnson</p>

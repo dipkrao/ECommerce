@@ -1,9 +1,12 @@
 .banner-slider {
   position: relative;
-  width: 100%;
-  height: 500px;
+  width: 100vw;
+  /* Force true full-bleed even if a parent becomes centered later */
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  height: 520px;
   overflow: hidden;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #000;
 }
 
 .banner-slide {
@@ -12,12 +15,13 @@
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .banner-image {
-  position: relative;
-  width: 70%;
+  position: absolute;
+  inset: 0;
+  width: 100%;
   height: 100%;
   z-index: 1;
 }
@@ -30,44 +34,33 @@
 }
 
 .banner-content {
-  position: relative;
+  position: absolute;
+  inset: 0;
   z-index: 2;
-  width: 30%;
+  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 0 2rem;
+  justify-content: flex-start;
+  padding: 0 5vw;
 }
 
 .banner-text {
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(15px);
-  padding: 2.5rem 2rem;
+  background: transparent;
+  backdrop-filter: none;
+  padding: 0;
   border-radius: 0;
   box-shadow: none;
-  width: 100%;
-  max-width: none;
+  width: 55%;
+  max-width: 760px;
   text-align: left;
   position: relative;
-  border-left: 5px solid #667eea;
-  transform: skew(-2deg);
+  border-left: 0;
+  transform: none;
 }
 
 .banner-text::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    45deg,
-    transparent 30%,
-    rgba(255, 255, 255, 0.1) 50%,
-    transparent 70%
-  );
-  pointer-events: none;
+  content: none;
 }
 
 .banner-title {
@@ -89,7 +82,7 @@
   left: 0;
   width: 80px;
   height: 3px;
-  background: linear-gradient(90deg, #667eea, #764ba2);
+  background: #ffffff;
 }
 
 .banner-description {
@@ -109,17 +102,18 @@
   font-size: 1.1rem;
   font-weight: 700;
   text-decoration: none;
-  border-radius: 0;
+  border-radius: 6px;
   transition: all 0.4s ease;
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: #ffffff;
   color: white;
-  border: 2px solid transparent;
+  color: #111827;
+  border: 2px solid #ffffff;
   cursor: pointer;
   position: relative;
   overflow: hidden;
   text-transform: uppercase;
   letter-spacing: 1px;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
 .banner-btn::before {
@@ -144,10 +138,10 @@
 
 .banner-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
-  color: white;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+  color: #111827;
   text-decoration: none;
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: #ffffff;
 }
 
 .banner-nav {
@@ -242,17 +236,16 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .banner-slider {
-    height: 450px;
+    height: 460px;
   }
 
   .banner-content {
-    padding: 0 1.5rem;
-    width: 30%;
+    padding: 0 16px;
   }
 
   .banner-text {
-    padding: 2rem 1.5rem;
-    transform: skew(-1deg);
+    width: 100%;
+    max-width: 520px;
   }
 
   .banner-title {
@@ -288,14 +281,12 @@
   }
 
   .banner-content {
-    padding: 0 1rem;
-    width: 30%;
+    padding: 0 14px;
   }
 
   .banner-text {
-    padding: 1.5rem 1rem;
-    transform: none;
-    border-left: 3px solid #667eea;
+    width: 100%;
+    max-width: 480px;
   }
 
   .banner-title {

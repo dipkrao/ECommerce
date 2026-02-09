@@ -1,18 +1,48 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
-import './Footer.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedin,
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
+import { useAppSelector } from "../../store/hooks";
+import "./Footer.css";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const settings = useAppSelector((state) => state.settings?.data);
+
+  const storeName = settings?.storeName || settings?.name || "HY Nutrition";
+  const tagline =
+    settings?.storeDescription ||
+    settings?.tagline ||
+    "Premium supplements for peak performance";
+  const address =
+    settings?.address ||
+    settings?.storeAddress ||
+    "123 Fitness Street, Gym City, GC 12345";
+  const phone =
+    settings?.contactPhone ||
+    settings?.phone ||
+    settings?.supportPhone ||
+    "+1 (555) 123-4567";
+  const email =
+    settings?.contactEmail ||
+    settings?.email ||
+    settings?.supportEmail ||
+    "info@hynutrition.com";
 
   return (
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section">
           <div className="footer-brand">
-            <h3 className="footer-logo">PowerFuel</h3>
-            <p className="footer-tagline">Premium supplements for peak performance</p>
+            <h3 className="footer-logo">{storeName}</h3>
+            <p className="footer-tagline">{tagline}</p>
           </div>
           <p className="footer-description">
             We provide high-quality supplements to help athletes, gym enthusiasts, and sports people achieve their fitness goals. 
@@ -75,15 +105,15 @@ const Footer = () => {
           <div className="contact-info">
             <div className="contact-item">
               <FaMapMarkerAlt className="contact-icon" />
-              <span>123 Fitness Street, Gym City, GC 12345</span>
+              <span>{address}</span>
             </div>
             <div className="contact-item">
               <FaPhone className="contact-icon" />
-              <span>+1 (555) 123-4567</span>
+              <span>{phone}</span>
             </div>
             <div className="contact-item">
               <FaEnvelope className="contact-icon" />
-              <span>info@powerfuel.com</span>
+              <span>{email}</span>
             </div>
           </div>
           
@@ -105,7 +135,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="footer-bottom-content">
           <div className="footer-bottom-left">
-            <p>&copy; {currentYear} PowerFuel Supplements. All rights reserved.</p>
+            <p>&copy; {currentYear} {storeName}. All rights reserved.</p>
           </div>
           <div className="footer-bottom-right">
             <Link to="/privacy">Privacy Policy</Link>
