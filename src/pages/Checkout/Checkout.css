@@ -354,6 +354,30 @@
 }
 
 @media (max-width: 480px) {
+  .checkout-page .container {
+    padding: 0 0.75rem;
+  }
+
+  .order-success {
+    padding: 2.5rem 1rem;
+  }
+
+  .success-icon {
+    font-size: 3rem;
+  }
+
+  .order-success h1 {
+    font-size: 1.75rem;
+  }
+
+  .order-success p {
+    font-size: 0.9375rem;
+  }
+
+  .checkout-layout {
+    margin: 1rem 0;
+  }
+
   .checkout-form {
     padding: 1rem;
   }
@@ -371,7 +395,61 @@
     font-size: 1.125rem;
   }
 
+  .section-icon {
+    font-size: 1rem;
+  }
+
+  .form-group label {
+    font-size: 0.8125rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 0.5rem 0.75rem;
+    font-size: 16px;
+  }
+
+  .checkbox-container {
+    font-size: 0.8125rem;
+  }
+
+  .checkout-submit {
+    padding: 0.875rem;
+    font-size: 1rem;
+  }
+
   .summary-card {
     padding: 1rem;
+  }
+
+  .summary-card h3 {
+    font-size: 1.125rem;
+  }
+
+  .item-name {
+    font-size: 0.8125rem;
+  }
+
+  .item-quantity,
+  .item-price {
+    font-size: 0.8125rem;
+  }
+
+  .total-row {
+    font-size: 0.8125rem;
+  }
+
+  .total-row.final {
+    font-size: 1rem;
+  }
+
+  .security-notice {
+    font-size: 0.8125rem;
+    padding: 0.75rem;
+  }
+
+  .error-message {
+    font-size: 0.875rem;
+    padding: 0.75rem;
   }
 }

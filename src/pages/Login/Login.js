@@ -78,7 +78,7 @@ const Login = () => {
     }
 
     await dispatch(
-      login({ email: formData.email, password: formData.password })
+      login({ email: formData.email, password: formData.password }),
     );
   };
 
@@ -157,28 +157,6 @@ const Login = () => {
             Sign In
           </button>
         </form>
-
-        <div className="demo-login">
-          <button
-            type="button"
-            className="btn btn-outline demo-btn"
-            onClick={() => {
-              // Demo login - create mock user
-              const demoUser = {
-                id: 1,
-                email: "demo@example.com",
-                username: "demo",
-                name: "Demo User",
-                role: "customer",
-              };
-              localStorage.setItem("user", JSON.stringify(demoUser));
-              localStorage.setItem("userToken", "demo-token-" + Date.now());
-              navigate("/");
-            }}
-          >
-            🚀 Try Demo Login
-          </button>
-        </div>
 
         <div className="auth-divider">
           <span>or</span>

@@ -26,7 +26,7 @@ api.interceptors.request.use(
   },
   (error) => {
     return Promise.reject(error);
-  }
+  },
 );
 
 // Response interceptor for error handling
@@ -41,7 +41,7 @@ api.interceptors.response.use(
       // Let the components handle authentication state
     }
     return Promise.reject(error);
-  }
+  },
 );
 
 // API endpoints
@@ -93,6 +93,13 @@ export const legalPageAPI = {
   delete: (pageType) => api.delete(`/legal-pages/${pageType}`),
   toggleStatus: (pageType) => api.patch(`/legal-pages/${pageType}/toggle`),
   getPublic: (pageType) => api.get(`/legal-pages/public/${pageType}`),
+};
+
+// Legal content API - public privacy policy from /api/legal-pages/public/privacy-policy
+export const legalAPI = {
+  getPrivacyPolicy: () => api.get("/legal-pages/public/privacy-policy"),
+  updatePrivacyPolicy: (content) =>
+    api.put("/legal-pages/public/privacy-policy", { content }),
 };
 
 export const settingsAPI = {

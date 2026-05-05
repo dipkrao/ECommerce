@@ -572,22 +572,88 @@
 }
 
 @media (max-width: 480px) {
+  .breadcrumb {
+    font-size: 0.8125rem;
+    margin: 1rem 0;
+  }
+
+  .product-main {
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .main-image {
+    height: 260px;
+  }
+
   .product-title {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
+  }
+
+  .product-sku,
+  .rating-text {
+    font-size: 0.8125rem;
   }
 
   .current-price {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
+  }
+
+  .original-price {
+    font-size: 1rem;
+  }
+
+  .product-description {
+    font-size: 0.875rem;
+  }
+
+  .product-features h3 {
+    font-size: 1rem;
+  }
+
+  .product-features li {
+    font-size: 0.875rem;
+  }
+
+  .quantity-selector label {
+    font-size: 0.8125rem;
   }
 
   .action-buttons {
     gap: 0.75rem;
   }
 
+  .add-to-cart-btn {
+    padding: 0.875rem;
+    font-size: 0.9375rem;
+  }
+
   .wishlist-btn,
   .share-btn {
     min-width: auto;
     flex: 1;
+    padding: 0.875rem;
+    font-size: 0.875rem;
+  }
+
+  .benefit-text strong {
+    font-size: 0.8125rem;
+  }
+
+  .benefit-text span {
+    font-size: 0.6875rem;
+  }
+
+  .tab-panel h3 {
+    font-size: 1.25rem;
+  }
+
+  .tab-panel h4 {
+    font-size: 1rem;
+  }
+
+  .tab-panel p {
+    font-size: 0.875rem;
   }
 
   .tab-navigation {
@@ -596,6 +662,8 @@
 
   .tab-btn {
     min-width: auto;
+    padding: 0.625rem 1rem;
+    font-size: 0.8125rem;
     border-bottom: none;
     border-right: 3px solid transparent;
   }
@@ -609,8 +677,27 @@
     padding: 1rem;
   }
 
+  .rating-number {
+    font-size: 2.25rem;
+  }
+
+  .total-reviews {
+    font-size: 0.8125rem;
+  }
+
+  .related-products h2 {
+    font-size: 1.375rem;
+    margin-bottom: 1rem;
+  }
+
   .products-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
     align-items: stretch;
+  }
+
+  .loading {
+    font-size: 1rem;
+    padding: 2rem 1rem;
   }
 }

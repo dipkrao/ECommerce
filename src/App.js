@@ -20,6 +20,9 @@ import Checkout from "./pages/Checkout/Checkout";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
 import Profile from "./pages/Profile/Profile";
+import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService/TermsOfService";
+import CookiePolicy from "./pages/CookiePolicy/CookiePolicy";
 import "./App.css";
 
 // Protected Route Component
@@ -143,6 +146,9 @@ function AppContent() {
                 </ProtectedRoute>
               }
             />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<TermsOfService />} />
+            <Route path="/cookies" element={<CookiePolicy />} />
           </Routes>
         </main>
         <Footer />

@@ -151,12 +151,49 @@ code {
 }
 
 @media (max-width: 768px) {
-  .container {
-    padding: 0 0.5rem;
+  body {
+    font-size: 15px;
   }
-  
+
+  .container {
+    padding: 0 1rem;
+  }
+
   .btn {
     padding: 0.5rem 1rem;
     font-size: 0.875rem;
+  }
+
+  .form-label {
+    font-size: 0.875rem;
+  }
+
+  .form-input {
+    padding: 0.625rem 0.75rem;
+    font-size: 0.9375rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .btn {
+    padding: 0.5rem 0.875rem;
+    font-size: 0.8125rem;
+  }
+
+  .form-label {
+    font-size: 0.8125rem;
+  }
+
+  .form-input {
+    padding: 0.5rem 0.75rem;
+    font-size: 16px; /* prevents zoom on focus in iOS */
   }
 }

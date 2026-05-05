@@ -277,29 +277,57 @@
 
 @media (max-width: 480px) {
   .banner-slider {
-    height: 400px;
+    height: 360px;
   }
 
   .banner-content {
-    padding: 0 14px;
+    padding: 0 12px;
   }
 
   .banner-text {
     width: 100%;
-    max-width: 480px;
+    max-width: 100%;
   }
 
   .banner-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     letter-spacing: 0.5px;
+    margin-bottom: 0.75rem;
+  }
+
+  .banner-title::after {
+    width: 50px;
   }
 
   .banner-description {
-    font-size: 0.9rem;
+    font-size: 0.8125rem;
+    margin-bottom: 1.5rem;
   }
 
   .banner-btn {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.9rem;
+    padding: 0.625rem 1.25rem;
+    font-size: 0.8125rem;
+  }
+
+  .banner-nav {
+    width: 36px;
+    height: 36px;
+  }
+
+  .banner-prev {
+    left: 0.5rem;
+  }
+
+  .banner-next {
+    right: 0.5rem;
+  }
+
+  .banner-dots {
+    bottom: 0.75rem;
+  }
+
+  .banner-dot {
+    width: 10px;
+    height: 10px;
   }
 }

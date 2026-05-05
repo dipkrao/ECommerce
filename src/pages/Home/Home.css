@@ -464,23 +464,62 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding: 3rem 0;
+  }
+
   .hero-content {
     grid-template-columns: 1fr;
     text-align: center;
     gap: 2rem;
+    padding: 0 1rem;
   }
 
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.0625rem;
   }
 
   .hero-buttons {
     justify-content: center;
   }
 
+  .features {
+    padding: 3rem 0;
+  }
+
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.125rem;
+  }
+
+  .feature-card p {
+    font-size: 0.875rem;
+  }
+
+  .feature-icon {
+    width: 64px;
+    height: 64px;
+    font-size: 1.5rem;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
   }
 
   .products-grid {
@@ -495,12 +534,133 @@
     min-height: 360px;
   }
 
+  .products-grid .product-name {
+    font-size: 1rem;
+  }
+
+  .products-grid .product-price {
+    font-size: 1.125rem;
+  }
+
+  .view-all-btn {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .categories {
+    padding: 3rem 0;
+    overflow: hidden;
+  }
+
+  .categories .section-header {
+    padding: 0 1rem;
+  }
+
   .categories-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 0.5rem 1rem 1rem;
+    margin: 0 -1rem;
+    scrollbar-width: thin;
+  }
+
+  .categories-grid::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .categories-grid::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+    border-radius: 3px;
+  }
+
+  .categories-grid::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 3px;
+  }
+
+  .category-card {
+    flex: 0 0 auto;
+    min-width: min(220px, 75vw);
+    max-width: min(220px, 75vw);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .category-name {
+    font-size: 1.25rem;
+  }
+
+  .category-count {
+    font-size: 0.875rem;
+  }
+
+  .testimonials {
+    padding: 3rem 0;
+    overflow: hidden;
+  }
+
+  .testimonials .section-header {
+    padding: 0 1rem;
   }
 
   .testimonials-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 0.5rem 1rem 1rem;
+    margin: 0 -1rem;
+    scrollbar-width: thin;
+  }
+
+  .testimonials-grid::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .testimonials-grid::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+    border-radius: 3px;
+  }
+
+  .testimonials-grid::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 3px;
+  }
+
+  .testimonial-card {
+    flex: 0 0 auto;
+    min-width: min(320px, 85vw);
+    max-width: min(320px, 85vw);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .testimonial-content p {
+    font-size: 0.9375rem;
+  }
+
+  .testimonial-author strong {
+    font-size: 1rem;
+  }
+
+  .cta-section {
+    padding: 3rem 1rem;
+  }
+
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+
+  .cta-content p {
+    font-size: 1rem;
   }
 
   .cta-buttons {
@@ -512,41 +672,164 @@
     width: 100%;
     max-width: 300px;
   }
+
+  .loading-spinner p {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
   .hero {
-    padding: 2rem 0;
+    padding: 1.5rem 0;
+  }
+
+  .hero-content {
+    padding: 0 0.75rem;
   }
 
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   .hero-subtitle {
-    font-size: 1rem;
+    font-size: 0.9375rem;
+  }
+
+  .features {
+    padding: 2rem 0;
   }
 
   .features-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .feature-card {
+    padding: 1rem 0.75rem;
+  }
+
+  .feature-card h3 {
+    font-size: 0.9375rem;
+  }
+
+  .feature-card p {
+    font-size: 0.75rem;
+  }
+
+  .feature-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.125rem;
+  }
+
+  .featured-products,
+  .categories,
+  .testimonials {
+    padding: 2rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.875rem;
   }
 
   .products-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
     align-items: stretch;
     align-content: start;
     justify-items: stretch;
   }
 
   .products-grid .product-card {
-    min-height: 340px;
+    min-height: 320px;
   }
 
-  .section-title {
-    font-size: 2rem;
+  .products-grid .product-name {
+    font-size: 0.9375rem;
+  }
+
+  .products-grid .product-price {
+    font-size: 1rem;
+  }
+
+  .products-grid .product-info {
+    padding: 1rem;
+  }
+
+  .view-all-btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.875rem;
+  }
+
+  .categories-grid {
+    padding: 0.5rem 0.75rem 1rem;
+    margin: 0 -0.75rem;
+    gap: 0.75rem;
+  }
+
+  .category-card {
+    min-width: min(180px, 70vw);
+    max-width: min(180px, 70vw);
+    padding: 1.25rem;
+  }
+
+  .category-name {
+    font-size: 1.125rem;
+  }
+
+  .category-count {
+    font-size: 0.8125rem;
+  }
+
+  .cta-section {
+    padding: 2rem 0.75rem;
   }
 
   .cta-content h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .cta-content p {
+    font-size: 0.875rem;
+  }
+
+  .testimonials {
+    padding: 2rem 0;
+  }
+
+  .testimonials-grid {
+    padding: 0.5rem 0.75rem 1rem;
+    margin: 0 -0.75rem;
+    gap: 0.75rem;
+  }
+
+  .testimonial-card {
+    min-width: min(280px, 82vw);
+    max-width: min(280px, 82vw);
+    padding: 1.5rem;
+  }
+
+  .testimonial-content p {
+    font-size: 0.875rem;
+  }
+
+  .testimonial-author strong {
+    font-size: 0.9375rem;
+  }
+
+  .testimonial-author span {
+    font-size: 0.8125rem;
+  }
+
+  .loading-spinner p {
+    font-size: 0.9375rem;
   }
 }

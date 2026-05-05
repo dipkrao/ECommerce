@@ -290,13 +290,70 @@
 }
 
 /* Responsive Design */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  .auth-page {
+    padding: 1.5rem 1rem;
+  }
+
   .auth-container {
     padding: 2rem 1.5rem;
   }
 
   .auth-header h1 {
-    font-size: 1.75rem;
+    font-size: 1.875rem;
+  }
+
+  .auth-header p {
+    font-size: 0.9375rem;
+  }
+
+  .form-label {
+    font-size: 0.875rem;
+  }
+
+  .form-input {
+    font-size: 16px;
+  }
+
+  .auth-button {
+    font-size: 0.9375rem;
+    padding: 0.875rem;
+  }
+
+  .auth-footer,
+  .auth-divider span {
+    font-size: 0.8125rem;
+  }
+
+  .social-btn {
+    font-size: 0.8125rem;
+  }
+
+  .error-message {
+    font-size: 0.875rem;
+    padding: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-page {
+    padding: 1rem 0.75rem;
+  }
+
+  .auth-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .auth-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .auth-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .auth-header p {
+    font-size: 0.875rem;
   }
 
   .form-options {
@@ -307,5 +364,15 @@
 
   .forgot-password {
     align-self: flex-end;
+    font-size: 0.8125rem;
+  }
+
+  .auth-button {
+    font-size: 0.875rem;
+    padding: 0.75rem;
+  }
+
+  .checkbox-container {
+    font-size: 0.8125rem;
   }
 }
