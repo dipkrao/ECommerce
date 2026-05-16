@@ -1,0 +1,27 @@
+#!/bin/sh
+# Blocks node_modules and oversized files from being committed.
+
+if git diff --cached --name-only --diff-filter=AM | grep -qE '^node_modules/'; then
+  echo ""
+  echo "ERROR: node_modules must not be committed."
+  echo "  Fix: git rm -r --cached node_modules"
+  echo "  Then commit again (node_modules/ is in .gitignore)."
+  echo ""
+  exit 1
+fi
+
+max_bytes=52428800
+for file in $(git diff --cached --name-only --diff-filter=AM); do
+  if [ -f "$file" ]; then
+    size=$(wc -c < "$file" 2>/dev/null | tr -d ' ')
+    if [ -n "$size" ] && [ "$size" -gt "$max_bytes" ]; then
+      echo ""
+      echo "ERROR: $file is ${size} bytes (limit 50MB for commits)."
+      echo "  Large build caches belong in .gitignore, not the repository."
+      echo ""
+      exit 1
+    fi
+  fi
+done
+
+exit 0

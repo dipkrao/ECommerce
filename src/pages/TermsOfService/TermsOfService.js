@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import StoreContactInfo from "../../components/StoreContactInfo/StoreContactInfo";
 import "./TermsOfService.css";
 
 const TermsOfService = () => {
@@ -362,18 +363,7 @@ const TermsOfService = () => {
               If you have any questions about these Terms of Service, please
               contact us:
             </p>
-            <div className="contact-info">
-              <p>
-                <strong>Email:</strong> legal@HY Nutrition.com
-              </p>
-              <p>
-                <strong>Phone:</strong> +1 (555) 123-4567
-              </p>
-              <p>
-                <strong>Address:</strong> 123 Ecommerce Street, Business
-                District, NY 10001
-              </p>
-            </div>
+            <StoreContactInfo />
           </section>
         </div>
 

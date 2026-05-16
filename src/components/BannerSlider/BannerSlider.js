@@ -159,8 +159,8 @@ const BannerSlider = () => {
         </div>
         <div className="banner-content">
           <div className="banner-text">
-            <h1 className="banner-title">{currentBanner.title}</h1>
-            <p className="banner-description">{currentBanner.description}</p>
+            {/* <h1 className="banner-title">{currentBanner.title}</h1>
+            <p className="banner-description">{currentBanner.description}</p> */}
             {/* Button removed as per design */}
           </div>
         </div>

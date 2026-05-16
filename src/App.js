@@ -4,6 +4,7 @@ import {
   Routes,
   Route,
   Navigate,
+  useLocation,
 } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./store";
@@ -58,13 +59,16 @@ const ProtectedRouteInner = ({ children }) => {
 function App() {
   return (
     <Provider store={store}>
-      <AppContent />
+      <Router>
+        <AppContent />
+      </Router>
     </Provider>
   );
 }
 
 function AppContent() {
   const dispatch = useAppDispatch();
+  const location = useLocation();
 
   useEffect(() => {
     // Check for existing user data on app start
@@ -84,12 +88,10 @@ function AppContent() {
   }, [dispatch]);
 
   useEffect(() => {
-    // Public store settings (name/address/etc.) used across the site
     dispatch(fetchPublicSettings());
-  }, [dispatch]);
+  }, [dispatch, location.pathname]);
 
   useEffect(() => {
-    // Keep settings fresh (useful when admin updates store details while site is open)
     const refresh = () => dispatch(fetchPublicSettings());
 
     const onFocus = () => refresh();
@@ -102,7 +104,7 @@ function AppContent() {
 
     const interval = setInterval(() => {
       if (!document.hidden) refresh();
-    }, 30000); // every 30s while visible
+    }, 15000);
 
     return () => {
       window.removeEventListener("focus", onFocus);
@@ -112,48 +114,46 @@ function AppContent() {
   }, [dispatch]);
 
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/products/:id" element={<ProductDetail />} />
-            <Route
-              path="/cart"
-              element={
-                <ProtectedRoute>
-                  <Cart />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/checkout"
-              element={
-                <ProtectedRoute>
-                  <Checkout />
-                </ProtectedRoute>
-              }
-            />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route
-              path="/profile"
-              element={
-                <ProtectedRoute>
-                  <Profile />
-                </ProtectedRoute>
-              }
-            />
-            <Route path="/privacy" element={<PrivacyPolicy />} />
-            <Route path="/terms" element={<TermsOfService />} />
-            <Route path="/cookies" element={<CookiePolicy />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <div className="App">
+      <Navbar />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/products/:id" element={<ProductDetail />} />
+          <Route
+            path="/cart"
+            element={
+              <ProtectedRoute>
+                <Cart />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/checkout"
+            element={
+              <ProtectedRoute>
+                <Checkout />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute>
+                <Profile />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsOfService />} />
+          <Route path="/cookies" element={<CookiePolicy />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
   );
 }
 

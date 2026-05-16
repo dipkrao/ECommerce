@@ -9,32 +9,18 @@ import {
   FaPhone,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-import { useAppSelector } from "../../store/hooks";
+import useStoreSettings from "../../hooks/useStoreSettings";
 import "./Footer.css";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const settings = useAppSelector((state) => state.settings?.data);
-
-  const storeName = settings?.storeName || settings?.name || "HY Nutrition";
-  const tagline =
-    settings?.storeDescription ||
-    settings?.tagline ||
-    "Premium supplements for peak performance";
-  const address =
-    settings?.address ||
-    settings?.storeAddress ||
-    "123 Fitness Street, Gym City, GC 12345";
-  const phone =
-    settings?.contactPhone ||
-    settings?.phone ||
-    settings?.supportPhone ||
-    "+1 (555) 123-4567";
-  const email =
-    settings?.contactEmail ||
-    settings?.email ||
-    settings?.supportEmail ||
-    "info@hynutrition.com";
+  const {
+    storeName,
+    storeDescription,
+    address,
+    contactPhone,
+    contactEmail,
+  } = useStoreSettings();
 
   return (
     <footer className="footer">
@@ -42,7 +28,7 @@ const Footer = () => {
         <div className="footer-section">
           <div className="footer-brand">
             <h3 className="footer-logo">{storeName}</h3>
-            <p className="footer-tagline">{tagline}</p>
+            <p className="footer-tagline">{storeDescription}</p>
           </div>
           <p className="footer-description">
             We provide high-quality supplements to help athletes, gym enthusiasts, and sports people achieve their fitness goals. 
@@ -102,18 +88,18 @@ const Footer = () => {
 
         <div className="footer-section">
           <h4 className="footer-heading">Contact Info</h4>
-          <div className="contact-info">
+          <div className="footer-contact-info">
             <div className="contact-item">
               <FaMapMarkerAlt className="contact-icon" />
               <span>{address}</span>
             </div>
             <div className="contact-item">
               <FaPhone className="contact-icon" />
-              <span>{phone}</span>
+              <span>{contactPhone}</span>
             </div>
             <div className="contact-item">
               <FaEnvelope className="contact-icon" />
-              <span>{email}</span>
+              <span>{contactEmail}</span>
             </div>
           </div>
           

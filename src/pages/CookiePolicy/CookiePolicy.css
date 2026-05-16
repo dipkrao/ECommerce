@@ -98,7 +98,7 @@
   text-decoration: underline;
 }
 
-.contact-info {
+.legal-contact-info {
   background: #f7fafc;
   padding: 1.5rem;
   border-radius: 10px;
@@ -106,7 +106,7 @@
   margin-top: 1rem;
 }
 
-.contact-info p {
+.legal-contact-info p {
   margin: 0.5rem 0;
 }
 
@@ -240,7 +240,7 @@
     font-size: 0.875rem;
   }
 
-  .contact-info {
+  .legal-contact-info {
     padding: 1rem;
     font-size: 0.875rem;
   }

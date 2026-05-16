@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAppSelector, useAppDispatch } from "../../store/hooks";
+import useStoreSettings from "../../hooks/useStoreSettings";
 import { logout } from "../../store/slices/authSlice";
 import { FaShoppingCart, FaUser, FaSearch, FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css";
@@ -12,17 +13,12 @@ const Navbar = () => {
   const accountRef = useRef(null);
   const dispatch = useAppDispatch();
   const { user, isAuthenticated } = useAppSelector((state) => state.auth);
-  const settings = useAppSelector((state) => state.settings?.data);
+  const { storeName, storeDescription, settings } = useStoreSettings();
   const { items } = useAppSelector((state) => state.cart);
   const itemCount = items.length;
   const navigate = useNavigate();
 
-  const storeName = settings?.storeName || settings?.name || "HY Nutrition";
-  const storeSubtitle =
-    settings?.storeSubtitle ||
-    settings?.storeDescription ||
-    settings?.tagline ||
-    "Supplements & Vitamins";
+  const storeSubtitle = storeDescription || "Supplements & Vitamins";
   const brandIcon =
     settings?.brandIcon ||
     (typeof storeName === "string"

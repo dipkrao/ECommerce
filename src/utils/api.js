@@ -103,8 +103,10 @@ export const legalAPI = {
 };
 
 export const settingsAPI = {
-  // Public storefront endpoint (no auth)
-  getPublic: () => api.get("/settings/public"),
+  getPublic: () =>
+    api.get("/settings/public", {
+      params: { _t: Date.now() },
+    }),
 };
 
 export const orderAPI = {
