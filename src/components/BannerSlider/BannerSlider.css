@@ -1,16 +1,17 @@
 .banner-slider {
   position: relative;
   width: 100vw;
-  /* Force true full-bleed even if a parent becomes centered later */
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  height: 520px;
+  margin-top: -80px;
+  padding-top: calc(80px + 42vw);
   overflow: hidden;
   background: #000;
 }
 
 .banner-slide {
-  position: relative;
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   display: flex;
@@ -30,7 +31,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center top;
 }
 
 .banner-content {
@@ -236,7 +237,8 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .banner-slider {
-    height: 460px;
+    margin-top: -72px;
+    padding-top: calc(72px + 56vw);
   }
 
   .banner-content {
@@ -277,7 +279,8 @@
 
 @media (max-width: 480px) {
   .banner-slider {
-    height: 360px;
+    margin-top: -64px;
+    padding-top: calc(64px + 70vw);
   }
 
   .banner-content {
