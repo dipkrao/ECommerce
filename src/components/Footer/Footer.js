@@ -65,7 +65,6 @@ const Footer = () => {
         <div className="footer-section">
           <h4 className="footer-heading">Customer Service</h4>
           <ul className="footer-links">
-            <li><Link to="/contact">Contact Us</Link></li>
             <li><Link to="/shipping">Shipping Info</Link></li>
             <li><Link to="/returns">Returns & Exchanges</Link></li>
             <li><Link to="/faq">FAQ</Link></li>
@@ -78,11 +77,13 @@ const Footer = () => {
           <h4 className="footer-heading">Company</h4>
           <ul className="footer-links">
             <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/careers">Careers</Link></li>
-            <li><Link to="/press">Press</Link></li>
-            <li><Link to="/partners">Partnerships</Link></li>
-            <li><Link to="/sustainability">Sustainability</Link></li>
-            <li><Link to="/blog">Blog</Link></li>
+            <li><Link to="/contact">Contact Us</Link></li>
+
+            {/* <li><Link to="/careers">Careers</Link></li> */}
+            {/* <li><Link to="/press">Press</Link></li> */}
+            {/* <li><Link to="/partners">Partnerships</Link></li> */}
+            {/* <li><Link to="/sustainability">Sustainability</Link></li> */}
+            {/* <li><Link to="/blog">Blog</Link></li> */}
           </ul>
         </div>
 
