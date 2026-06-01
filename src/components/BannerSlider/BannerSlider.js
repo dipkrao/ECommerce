@@ -14,7 +14,7 @@ const BannerSlider = () => {
       id: 1,
       title: "Welcome to HY Nutrition",
       description: "Premium supplements for your fitness journey",
-      image: "https://via.placeholder.com/1200x400?text=HY Nutrition+Supplements",
+      image: "",
       buttonText: "Shop Now",
       link: "/products",
     },
@@ -85,7 +85,7 @@ const BannerSlider = () => {
           id: "test1",
           title: "Test Banner 1",
           description: "This is a test banner",
-          image: "https://via.placeholder.com/1200x400?text=Test+Banner+1",
+          image: "",
           buttonText: "Test Button",
           link: "/test",
         },
@@ -152,8 +152,7 @@ const BannerSlider = () => {
             alt={currentBanner.title}
             onError={(e) => {
               console.error("Image failed to load:", currentBanner.image);
-              e.target.src =
-                "https://via.placeholder.com/1200x400?text=HY Nutrition+Supplements";
+              e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='400' viewBox='0 0 1200 400'%3E%3Crect width='1200' height='400' fill='%231e3a5f'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='36' fill='%23ffffff'%3EHY Nutrition Supplements%3C/text%3E%3C/svg%3E";
             }}
           />
         </div>
