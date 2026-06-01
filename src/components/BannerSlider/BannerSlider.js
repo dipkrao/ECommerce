@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import {
-  FaArrowLeft,
-  FaArrowRight,
-  FaArrowRight as FaArrow,
-} from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { bannerAPI } from "../../utils/api";
 import "./BannerSlider.css";
+
+const BASE_URL = (
+  process.env.REACT_APP_API_URL || "http://localhost:5000"
+).replace(/\/api$/, "");
 
 const BannerSlider = () => {
   const [banners, setBanners] = useState([
@@ -102,7 +101,7 @@ const BannerSlider = () => {
 
   const prevSlide = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + banners.length) % banners.length
+      (prevIndex) => (prevIndex - 1 + banners.length) % banners.length,
     );
   };
 
@@ -146,13 +145,14 @@ const BannerSlider = () => {
               currentBanner.image?.startsWith("http")
                 ? currentBanner.image
                 : currentBanner.image?.startsWith("/uploads")
-                ? `http://localhost:5000${currentBanner.image}`
-                : `/images/${currentBanner.image}`
+                  ? `${BASE_URL}${currentBanner.image}`
+                  : `/images/${currentBanner.image}`
             }
             alt={currentBanner.title}
             onError={(e) => {
               console.error("Image failed to load:", currentBanner.image);
-              e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='400' viewBox='0 0 1200 400'%3E%3Crect width='1200' height='400' fill='%231e3a5f'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='36' fill='%23ffffff'%3EHY Nutrition Supplements%3C/text%3E%3C/svg%3E";
+              e.target.src =
+                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='400' viewBox='0 0 1200 400'%3E%3Crect width='1200' height='400' fill='%231e3a5f'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='36' fill='%23ffffff'%3EHY Nutrition Supplements%3C/text%3E%3C/svg%3E";
             }}
           />
         </div>
