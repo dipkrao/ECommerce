@@ -73,16 +73,7 @@ export const bannerAPI = {
   toggleStatus: (id) => api.patch(`/banners/${id}/toggle`),
   reorder: (bannerOrders) => api.post("/banners/reorder", { bannerOrders }),
   // Public endpoint that doesn't require authentication
-  getPublic: () => {
-    const publicApi = axios.create({
-      baseURL: normalizedBaseUrl,
-      timeout: 10000,
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    return publicApi.get("/banners/active");
-  },
+  getPublic: () => api.get("/banners/active"),
 };
 
 export const legalPageAPI = {

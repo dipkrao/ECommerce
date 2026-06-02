@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAppSelector, useAppDispatch } from "../../store/hooks";
 import useStoreSettings from "../../hooks/useStoreSettings";
 import { logout } from "../../store/slices/authSlice";
+import { categoryAPI } from "../../utils/api";
 import { FaShoppingCart, FaUser, FaSearch, FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css";
 
@@ -10,7 +11,11 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAccountOpen, setIsAccountOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState({ _id: "", name: "ALL" });
+  const [isCategoryOpen, setIsCategoryOpen] = useState(false);
   const accountRef = useRef(null);
+  const categoryRef = useRef(null);
   const dispatch = useAppDispatch();
   const { user, isAuthenticated } = useAppSelector((state) => state.auth);
   const { storeName, storeDescription, settings } = useStoreSettings();
@@ -32,10 +37,31 @@ const Navbar = () => {
       : "HY") ||
     "HY";
 
+  useEffect(() => {
+    categoryAPI.getAll()
+      .then((res) => setCategories(res.data || []))
+      .catch(() => {});
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (categoryRef.current && !categoryRef.current.contains(e.target)) {
+        setIsCategoryOpen(false);
+      }
+    };
+    if (isCategoryOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isCategoryOpen]);
+
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      navigate(`/products?search=${encodeURIComponent(searchQuery.trim())}`);
+      const params = new URLSearchParams();
+      params.set("search", searchQuery.trim());
+      if (selectedCategory._id) params.set("category", selectedCategory._id);
+      navigate(`/products?${params.toString()}`);
       setSearchQuery("");
     }
   };
@@ -93,11 +119,36 @@ const Navbar = () => {
 
           <div className="navbar-center">
             <form onSubmit={handleSearch} className="search-bar">
-              <div className="search-category">
-                <button type="button" className="category-button">
-                  <span>ALL</span>
+              <div className="search-category" ref={categoryRef}>
+                <button
+                  type="button"
+                  className="category-button"
+                  onClick={() => setIsCategoryOpen((prev) => !prev)}
+                >
+                  <span>{selectedCategory.name}</span>
                   <span className="category-arrow">▾</span>
                 </button>
+                {isCategoryOpen && (
+                  <div className="category-dropdown">
+                    <button
+                      type="button"
+                      className={`category-option${!selectedCategory._id ? " active" : ""}`}
+                      onClick={() => { setSelectedCategory({ _id: "", name: "ALL" }); setIsCategoryOpen(false); }}
+                    >
+                      All Categories
+                    </button>
+                    {categories.map((cat) => (
+                      <button
+                        key={cat._id}
+                        type="button"
+                        className={`category-option${selectedCategory._id === cat._id ? " active" : ""}`}
+                        onClick={() => { setSelectedCategory(cat); setIsCategoryOpen(false); }}
+                      >
+                        {cat.name}
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
               <input
                 type="text"
